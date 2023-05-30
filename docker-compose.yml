@@ -6,5 +6,6 @@ services:
     environment:
       POSTGRES_PASSWORD: example
       POSTGRES_USER: example
+      POSTGRES_DB: portfolio
     ports:
       - '5432:5432'
