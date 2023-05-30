@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_page_repositories",
+  "info": {
+    "displayName": "Repositories",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "repository": {
+      "displayName": "Project",
+      "type": "component",
+      "repeatable": true,
+      "component": "page.project"
+    },
+    "moreProject": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.button"
+    }
+  }
+}

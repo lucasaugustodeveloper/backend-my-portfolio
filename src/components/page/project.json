@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_page_repository",
+  "info": {
+    "displayName": "Repository"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "linkGithub": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "linkSiteOnline": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
