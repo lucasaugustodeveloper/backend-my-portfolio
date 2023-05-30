@@ -1,7 +1,8 @@
 {
   "collectionName": "components_page_headers",
   "info": {
-    "displayName": "Header"
+    "displayName": "Header",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,11 +10,11 @@
       "type": "string",
       "required": true
     },
-    "Subtitulo": {
+    "subtitulo": {
       "type": "string",
       "required": true
     },
-    "Description": {
+    "description": {
       "type": "text",
       "required": true
     },
@@ -24,12 +25,12 @@
       "component": "page.button"
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

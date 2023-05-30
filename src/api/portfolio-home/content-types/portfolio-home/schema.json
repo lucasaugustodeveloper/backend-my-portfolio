@@ -33,12 +33,11 @@
       "repeatable": false,
       "component": "page.about"
     },
-    "Repositories": {
-      "displayName": "Projects",
+    "repositories": {
+      "displayName": "Repositories",
       "type": "component",
       "repeatable": false,
-      "component": "page.projects",
-      "required": true
+      "component": "page.repositories"
     }
   }
 }

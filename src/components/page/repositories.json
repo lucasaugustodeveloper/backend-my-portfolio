@@ -1,8 +1,7 @@
 {
   "collectionName": "components_page_repositories",
   "info": {
-    "displayName": "Repositories",
-    "description": ""
+    "displayName": "Repositories"
   },
   "options": {},
   "attributes": {
@@ -11,12 +10,12 @@
       "required": true
     },
     "repository": {
-      "displayName": "Project",
+      "displayName": "Repository",
       "type": "component",
       "repeatable": true,
-      "component": "page.project"
+      "component": "page.repository"
     },
-    "moreProject": {
+    "more": {
       "type": "component",
       "repeatable": false,
       "component": "page.button"
