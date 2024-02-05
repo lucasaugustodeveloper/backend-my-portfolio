@@ -74,12 +74,22 @@
     "Presentation": {
       "type": "component",
       "repeatable": false,
-      "component": "page.header",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "page.presentation"
+    },
+    "Skills": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "page.skills"
     }
   }
 }

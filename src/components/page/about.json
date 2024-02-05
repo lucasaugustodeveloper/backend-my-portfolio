@@ -1,7 +1,8 @@
 {
   "collectionName": "components_page_abouts",
   "info": {
-    "displayName": "About"
+    "displayName": "About",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -18,12 +19,6 @@
       "repeatable": false,
       "component": "page.button",
       "required": true
-    },
-    "skill": {
-      "displayName": "Skills",
-      "type": "component",
-      "repeatable": true,
-      "component": "page.skills"
     }
   }
 }

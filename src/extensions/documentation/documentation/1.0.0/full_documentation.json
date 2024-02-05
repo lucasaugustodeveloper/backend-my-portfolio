@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-02-05T19:35:12.518Z"
+    "x-generation-date": "2024-02-05T19:52:49.202Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -102,7 +102,10 @@
             "$ref": "#/components/schemas/PageHeaderComponent"
           },
           "Presentation": {
-            "$ref": "#/components/schemas/PageHeaderComponent"
+            "$ref": "#/components/schemas/PagePresentationComponent"
+          },
+          "Skills": {
+            "$ref": "#/components/schemas/PageSkillsComponent"
           },
           "locale": {
             "type": "string"
@@ -137,7 +140,10 @@
                 "$ref": "#/components/schemas/PageHeaderComponent"
               },
               "Presentation": {
-                "$ref": "#/components/schemas/PageHeaderComponent"
+                "$ref": "#/components/schemas/PagePresentationComponent"
+              },
+              "Skills": {
+                "$ref": "#/components/schemas/PageSkillsComponent"
               },
               "locale": {
                 "type": "string"
@@ -282,7 +288,10 @@
             "$ref": "#/components/schemas/PageHeaderComponent"
           },
           "Presentation": {
-            "$ref": "#/components/schemas/PageHeaderComponent"
+            "$ref": "#/components/schemas/PagePresentationComponent"
+          },
+          "Skills": {
+            "$ref": "#/components/schemas/PageSkillsComponent"
           },
           "createdAt": {
             "type": "string",
@@ -393,8 +402,19 @@
                 "type": "string"
               }
             }
+          }
+        }
+      },
+      "PageRepositoriesComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
           },
-          "skill": {
+          "title": {
+            "type": "string"
+          },
+          "repository": {
             "type": "array",
             "items": {
               "type": "object",
@@ -402,7 +422,60 @@
                 "id": {
                   "type": "number"
                 },
-                "logo": {
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "more": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "label": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "PageContactComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          }
+        }
+      },
+      "PageFooterComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "informations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "image": {
                   "type": "object",
                   "properties": {
                     "data": {
@@ -1022,48 +1095,14 @@
                       }
                     }
                   }
-                },
-                "title": {
-                  "type": "string"
                 }
               }
             }
-          }
-        }
-      },
-      "PageRepositoriesComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
           },
-          "title": {
+          "Title": {
             "type": "string"
           },
-          "repository": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "number"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "linkGithub": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "more": {
+          "send": {
             "type": "object",
             "properties": {
               "id": {
@@ -1074,36 +1113,6 @@
               },
               "url": {
                 "type": "string"
-              }
-            }
-          }
-        }
-      },
-      "PageContactComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          }
-        }
-      },
-      "PageFooterComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "informations": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "number"
-                },
-                "created": {
-                  "type": "string"
-                }
               }
             }
           }
@@ -1270,6 +1279,215 @@
                 },
                 "link": {
                   "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "PagePresentationComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "subtitulo": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "projetos": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "label": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          },
+          "contato": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "label": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "PageSkillsComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "TItle": {
+            "type": "string"
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "attributes": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "alternativeText": {
+                              "type": "string"
+                            },
+                            "caption": {
+                              "type": "string"
+                            },
+                            "width": {
+                              "type": "integer"
+                            },
+                            "height": {
+                              "type": "integer"
+                            },
+                            "formats": {},
+                            "hash": {
+                              "type": "string"
+                            },
+                            "ext": {
+                              "type": "string"
+                            },
+                            "mime": {
+                              "type": "string"
+                            },
+                            "size": {
+                              "type": "number",
+                              "format": "float"
+                            },
+                            "url": {
+                              "type": "string"
+                            },
+                            "previewUrl": {
+                              "type": "string"
+                            },
+                            "provider": {
+                              "type": "string"
+                            },
+                            "provider_metadata": {},
+                            "related": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "number"
+                                      },
+                                      "attributes": {
+                                        "type": "object",
+                                        "properties": {}
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "folder": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "attributes": {
+                                      "type": "object",
+                                      "properties": {}
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "folderPath": {
+                              "type": "string"
+                            },
+                            "createdAt": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "updatedAt": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "createdBy": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "attributes": {
+                                      "type": "object",
+                                      "properties": {}
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "updatedBy": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "attributes": {
+                                      "type": "object",
+                                      "properties": {}
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }

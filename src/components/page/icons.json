@@ -1,12 +1,21 @@
 {
   "collectionName": "components_page_icons",
   "info": {
-    "displayName": "Icons"
+    "displayName": "Icons",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "created": {
+    "label": {
       "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
       "required": true
     }
   }
