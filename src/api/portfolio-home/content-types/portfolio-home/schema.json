@@ -4,40 +4,82 @@
   "info": {
     "singularName": "portfolio-home",
     "pluralName": "portfolio-homes",
-    "displayName": "Portfólio - Home",
+    "displayName": "Home",
     "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
-    "logo": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "header": {
-      "displayName": "Header",
-      "type": "component",
-      "repeatable": false,
-      "component": "page.header",
-      "required": true
-    },
     "about": {
       "displayName": "About",
       "type": "component",
       "repeatable": false,
-      "component": "page.about"
+      "component": "page.about",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "repositories": {
       "displayName": "Repositories",
       "type": "component",
       "repeatable": false,
-      "component": "page.repositories"
+      "component": "page.repositories",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "title": {
+      "displayName": "Contact",
+      "type": "component",
+      "repeatable": false,
+      "component": "page.contact",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "footer": {
+      "displayName": "Footer",
+      "type": "component",
+      "repeatable": false,
+      "component": "page.footer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Presentation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

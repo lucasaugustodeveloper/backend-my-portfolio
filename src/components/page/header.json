@@ -6,31 +6,23 @@
   },
   "options": {},
   "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
     "title": {
       "type": "string",
       "required": true
     },
-    "subtitulo": {
-      "type": "string",
-      "required": true
-    },
-    "description": {
-      "type": "text",
-      "required": true
-    },
-    "button": {
-      "displayName": "Button",
+    "menu": {
+      "displayName": "Menu",
       "type": "component",
-      "repeatable": false,
-      "component": "page.button"
-    },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "repeatable": true,
+      "component": "page.menu"
     }
   }
 }

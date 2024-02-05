@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_footers",
+  "info": {
+    "displayName": "Footer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "informations": {
+      "displayName": "Icons",
+      "type": "component",
+      "repeatable": true,
+      "component": "page.icons"
+    }
+  }
+}

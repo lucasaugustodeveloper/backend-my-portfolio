@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_icons",
+  "info": {
+    "displayName": "Icons"
+  },
+  "options": {},
+  "attributes": {
+    "created": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
